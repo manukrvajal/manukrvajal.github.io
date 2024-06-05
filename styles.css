@@ -3,23 +3,28 @@
     src: url('fonts/brittany.ttf') format('truetype');
 }
 
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Para asegurar que no haya scroll */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     background-image: url('25c1b03b09ce66f525241186a0e79aee.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fija el fondo en su posición */
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 .welcome-container {
+    position: relative;
+    z-index: 1; /* Para que esté encima de la imagen de fondo */
     text-align: center;
     padding: 20px;
 }
@@ -39,6 +44,8 @@ button {
     cursor: pointer;
     position: absolute;
     bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 button:hover {
@@ -47,8 +54,12 @@ button:hover {
 
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-    body {
-        background-size: auto; /* Cambia el tamaño del fondo para dispositivos móviles */
+    .background-container {
+        height: auto; /* Ajustar la altura automáticamente en dispositivos móviles */
+    }
+
+    .background-image {
+        height: 100%; /* Ajustar la altura de la imagen de fondo en dispositivos móviles */
     }
 
     .welcome-container {
@@ -69,3 +80,4 @@ button:hover {
         bottom: 10px; /* Ajustar la posición en móviles */
     }
 }
+
