@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../imagenes/25c1b03b09ce66f525241186a0e79aee.jpg');
+    background-image: url('imagenes/25c1b03b09ce66f525241186a0e79aee.jpg');
     background-size: cover; 
     background-position:center ; 
     background-repeat: no-repeat; 
