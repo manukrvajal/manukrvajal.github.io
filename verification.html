@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a la Fiesta</title>
+    <link rel="stylesheet" href="verification-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-style: italic; color: rgb(149, 149, 247); font-family: 'Brittany';">Mis Quince Años</h1>
+        <p style="font-style: italic; color: rgb(149, 149, 247); font-family: 'Brittany';">Introduce tu número de documento</p>
+        <input type="text" id="documento" placeholder="Número de Documento">
+        <button onclick="verificarInvitacion()">Verificar</button>
+        <div id="resultado"></div>
+        <button id="whatsapp" onclick="confirmarPorWhatsapp()" style="display:none;">Confirmar por WhatsApp</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
